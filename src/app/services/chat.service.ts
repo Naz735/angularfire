@@ -93,7 +93,7 @@ logout() {
   })
 }
 
- // Adds a text or image message to Cloud Firestore.
+  // Adds a text or image message to Cloud Firestore.
 addMessage = async (
   textMessage: string | null,
   imageUrl: string | null,
@@ -134,6 +134,16 @@ addMessage = async (
     return;
   }
 };
+
+  // Saves a new message to Cloud Firestore.
+  saveTextMessage = async (messageText: string) => {
+    return this.addMessage(messageText, null);
+  };
+
+  // Loads chat messages history and listens for upcoming ones.
+  loadMessages = () => {
+    return null as unknown;
+  };
 
   // Saves a new message containing an image in Firebase.
   // This first saves the image in Firebase storage.
