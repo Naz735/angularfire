@@ -148,25 +148,31 @@ loadMessages = () => {
   return collectionData(recentMessagesQuery);
 }
 
-  // Saves a new message containing an image in Firebase.
-  // This first saves the image in Firebase storage.
-  saveImageMessage = async (file: any) => {};
+  // Saves a new message containing an image in Firestore.
+// This first saves the image in Firebase storage.
+saveImageMessage = async(file: any) => {
+  try {
+    // 1 - Add a message with a loading icon that will get updated with the shared image.
+    const messageRef = await this.addMessage(null, this.LOADING_IMAGE_URL);
 
-  async updateData(path: string, data: any) {}
+    // 2 - Upload the image to Cloud Storage.
+    const filePath = `${this.auth.currentUser?.uid}/${file.name}`;
+    const newImageRef = ref(this.storage, filePath);
+    const fileSnapshot = await uploadBytesResumable(newImageRef, file);
 
-  async deleteData(path: string) {}
+    // 3 - Generate a public URL for the file.
+    const publicImageUrl = await getDownloadURL(newImageRef);
 
-  getDocData(path: string) {}
-
-  getCollectionData(path: string) {}
-
-  async uploadToStorage(
-    path: string,
-    input: HTMLInputElement,
-    contentType: any
-  ) {
-    return null;
+    // 4 - Update the chat message placeholder with the image's URL.
+    messageRef ?
+    await updateDoc(messageRef, {
+      imageUrl: publicImageUrl,
+      storageUri: fileSnapshot.metadata.fullPath
+    }): null;
+  } catch (error) {
+    console.error('There was an error uploading a file to Cloud Storage:', error);
   }
+}
   // Requests permissions to show notifications.
   requestNotificationsPermissions = async () => {};
 
