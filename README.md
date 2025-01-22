@@ -1,27 +1,15 @@
-# Friendlychat
+NAME:MUHAMAD NAZIRUL BIN KASSIM ISMAIL
+STUDENT ID:2023622872
+GROUP:CDCS2703B1
+LECTURER NAME:MUHAMMAD ATIF RAMLAN
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+PROJECT BACKGROUD
+The Firebase Web Codelab tutorial provides a comprehensive guide for building a cloud-based web application by leveraging Firebase's powerful features, including real-time database management, user authentication, and web hosting. The project focuses on creating a collaborative app where users can sign in using their Google accounts, submit data, and view shared content in real time. By simplifying backend operations, this tutorial highlights how Firebase's tools enable developers to rapidly create scalable, dynamic web applications with minimal server-side coding.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+DISCUSSION
+The Firebase Web Codelab tutorial showed us how to use Firebase effectively by building web and mobile apps through Google’s platform and tools. Through this lab I learned fundamental Firebase tools including authentication, data storage, and website hosting plus gained practical project experience and new web development abilities.
+To complete this project I had problems getting my Firebase setup right. Problems with "Firebase not initialized" emerged when the configuration code got misplaced so developers needed to review the instructions and test extensively. To set up Google Sign-In authentication I needed to understand work with promises and async/await patterns required for cloud service management.
+Using Firestore created issues because of how documents work alongside security levels. Misplaced path names in the database returned error messages "document not found" and weak security rules let unauthorized users access data without permission. Working with real databases taught me the critical need to maintain accurate data records and build strong security systems effectively. Our team faced difficulties when deploying content to Firebase Hosting because we needed to learn how the firebase.json settings and directory setup work together. Learning from these problems showed me how to design projects for successful deployment.
+Our lab experience showed us how important cloud technology is for development work. Firebase helps developers manage backends more easily by providing database authentication and hosting tools. Data updates in real time through Firestore help build better chat systems and collaborative tools. Our analysis revealed that Firebase Authentication protects personal data through proven sign-in features that work directly into the system.
+When I configured Firestore security rules I learned how to strike the right balance between allowing user access and providing accurate security protection. Creating rules to control access for different types of users shows why cloud app security needs deliberate planning. Setting up these access rules made me value good access policy design more.
+Through the Firebase Web Codelab I learned how to solve problems better while feeling more comfortable working with cloud services. The Codelab gave me a solid base to move forward with Firebase while showing me new ways to apply its advanced options. The simple backend functions of Firebase now make development efficient enough to push me into cloud-first app creation practices
